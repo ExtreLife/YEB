@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace YEB.WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -23,6 +23,10 @@ namespace YEB.WebApi.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// test
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {

@@ -4,10 +4,28 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\WorkSpace\BackEnd\YEB\YEB.WebApi\YEB.WebApi.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.1" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YEB.Data\YEB.Data.csproj" />
+    <ProjectReference Include="..\YEB.Entity\YEB.Entity.csproj" />
+    <ProjectReference Include="..\YEB.Helper\YEB.Helper.csproj" />
+    <ProjectReference Include="..\YEB.Model\YEB.Model.csproj" />
+    <ProjectReference Include="..\YEB.Repository\YEB.Repository.csproj" />
+    <ProjectReference Include="..\YEB.Service\YEB.Service.csproj" />
   </ItemGroup>
 
 </Project>

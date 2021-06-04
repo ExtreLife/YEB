@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YEB.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:YEB.WebApi.Controllers.UserController.CheckUsername(YEB.Entity.User)">
+            <summary>
+            检测Username是否重复
+            </summary>
+            <param name="user"></param>
+            <returns>0-不重复 1-重复</returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.UserController.Login(YEB.Entity.User)">
+            <summary>
+            用户登录
+            登录成功颁发Token
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.UserController.Register(YEB.Entity.User)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="user"></param>
+            <returns>0-失败 1-成功</returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.UserController.GetSetting">
+            <summary>
+            测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.WeatherForecastController.Get">
+            <summary>
+            test
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YEB.WebApi.DIService">
+            <summary>
+            注入Service Repository
+            </summary>
+        </member>
+    </members>
+</doc>

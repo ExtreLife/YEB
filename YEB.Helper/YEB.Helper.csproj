@@ -4,4 +4,10 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\YEB.Data\YEB.Data.csproj" />
+    <ProjectReference Include="..\YEB.Entity\YEB.Entity.csproj" />
+    <ProjectReference Include="..\YEB.Model\YEB.Model.csproj" />
+  </ItemGroup>
+
 </Project>
