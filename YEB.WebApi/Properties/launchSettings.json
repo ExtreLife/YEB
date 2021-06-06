@@ -1,22 +1,22 @@
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:51290",
-      "sslPort": 44368
-    }
-  },
+  //"iisSettings": {
+  //  "windowsAuthentication": false,
+  //  "anonymousAuthentication": true,
+  //  "iisExpress": {
+  //    "applicationUrl": "http://localhost:51290",
+  //    "sslPort": 44368
+  //  }
+  //},
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
+    //"IIS Express": {
+    //  "commandName": "IISExpress",
+    //  "launchBrowser": true,
+    //  "launchUrl": "swagger",
+    //  "environmentVariables": {
+    //    "ASPNETCORE_ENVIRONMENT": "Development"
+    //  }
+    //},
     "YEB.WebApi": {
       "commandName": "Project",
       "dotnetRunMessages": "true",

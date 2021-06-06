@@ -40,22 +40,5 @@ namespace YEB.Helper
                 Data = null
             };
         }
-
-        /// <summary>
-        /// 封装JWT结果类
-        /// </summary>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        public static JwtResult GetJwtResult(Exception e)
-        {
-            StringBuilder stringBuilder = new StringBuilder(e.Message);
-            stringBuilder.AppendLine(e.StackTrace);
-            return new JwtResult
-            {
-                Result = (int)ResultCode.Error,
-                Message = stringBuilder.ToString(),
-                Token = null
-            };
-        }
     }
 }

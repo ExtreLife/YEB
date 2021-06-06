@@ -18,7 +18,7 @@ using YEB.Service;
 
 namespace YEB.WebApi.Controllers
 {
-    [Route("[controller]/[action]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -35,7 +35,7 @@ namespace YEB.WebApi.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns>0-不重复 1-重复</returns>
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> CheckUsername(User user)
         {
             try
@@ -86,15 +86,20 @@ namespace YEB.WebApi.Controllers
                         expires: DateTime.Now.AddMinutes(Expires),
                         signingCredentials: creds);
 
-                    return Ok(new JwtResult
+                    return Ok(new DataResult
                     {
                         Result = 1,
-                        Token = new JwtSecurityTokenHandler().WriteToken(token)
+                        Message = "登录成功！",
+                        Data = new
+                        {
+                            TokenHead = "Bearer",
+                            Token = new JwtSecurityTokenHandler().WriteToken(token)
+                        }
                     });
                 }
                 else
                 {
-                    return Ok(new JwtResult
+                    return Ok(new DataResult
                     {
                         Result = 0,
                         Message = "用户名或密码错误！"
@@ -103,7 +108,7 @@ namespace YEB.WebApi.Controllers
             }
             catch (Exception e)
             {
-                return Ok(ResultHelper.GetJwtResult(e));
+                return Ok(ResultHelper.GetDataResult(e));
             }
         }
 
