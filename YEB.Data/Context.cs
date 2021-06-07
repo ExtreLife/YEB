@@ -13,5 +13,8 @@ namespace YEB.Data
         {}
 
         public DbSet<User> User { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<Function> Function { get; set; }
+        public DbSet<Menu> Menu { get; set; }
     }
 }

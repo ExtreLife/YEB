@@ -4,6 +4,132 @@
         <name>YEB.WebApi</name>
     </assembly>
     <members>
+        <member name="M:YEB.WebApi.Controllers.FunctionController.Add(YEB.Entity.Function)">
+            <summary>
+            添加单笔Function
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.FunctionController.AddRange(System.Collections.Generic.List{YEB.Entity.Function})">
+            <summary>
+            添加多笔Function
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.FunctionController.Del(YEB.Entity.Function)">
+            <summary>
+            删除单笔Function
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.FunctionController.DelRange(System.Collections.Generic.List{YEB.Entity.Function})">
+            <summary>
+            删除多笔Function
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.FunctionController.Edit(YEB.Entity.Function)">
+            <summary>
+            编辑单笔Function
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.FunctionController.EditRange(System.Collections.Generic.List{YEB.Entity.Function})">
+            <summary>
+            编辑多笔Function
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.MenuController.Add(YEB.Entity.Menu)">
+            <summary>
+            添加单笔Menu
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.MenuController.AddRange(System.Collections.Generic.List{YEB.Entity.Menu})">
+            <summary>
+            添加多笔Menu
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.MenuController.Del(YEB.Entity.Menu)">
+            <summary>
+            删除单笔Menu
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.MenuController.DelRange(System.Collections.Generic.List{YEB.Entity.Menu})">
+            <summary>
+            删除多笔Menu
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.MenuController.Edit(YEB.Entity.Menu)">
+            <summary>
+            编辑单笔Menu
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.MenuController.EditRange(System.Collections.Generic.List{YEB.Entity.Menu})">
+            <summary>
+            编辑多笔Menu
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.RoleController.Add(YEB.Entity.Role)">
+            <summary>
+            添加单笔Role
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.RoleController.AddRange(System.Collections.Generic.List{YEB.Entity.Role})">
+            <summary>
+            添加多笔Role
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.RoleController.Del(YEB.Entity.Role)">
+            <summary>
+            删除单笔Role
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.RoleController.DelRange(System.Collections.Generic.List{YEB.Entity.Role})">
+            <summary>
+            删除多笔Role
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.RoleController.Edit(YEB.Entity.Role)">
+            <summary>
+            编辑单笔Role
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YEB.WebApi.Controllers.RoleController.EditRange(System.Collections.Generic.List{YEB.Entity.Role})">
+            <summary>
+            编辑多笔Role
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
         <member name="M:YEB.WebApi.Controllers.UserController.CheckUsername(YEB.Entity.User)">
             <summary>
             检测Username是否重复

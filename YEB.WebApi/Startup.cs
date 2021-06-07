@@ -80,7 +80,8 @@ namespace YEB.WebApi
             var ISS = Configuration["JwtConfig:ISS"];
             var Audience = Configuration["JwtConfig:Audience"];
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options => {
+                .AddJwtBearer(options =>
+                {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,// «∑Ò—È÷§Issuer
@@ -144,6 +145,12 @@ namespace YEB.WebApi
     {
         public static IServiceCollection AddCustomIOC(this IServiceCollection services)
         {
+            services.AddScoped<IFunctionRepository, FunctionRepositoryImpl>();
+            services.AddScoped<IFunctionService, FunctionServiceImpl>();
+            services.AddScoped<IMenuRepository, MenuRepositoryImpl>();
+            services.AddScoped<IMenuService, MenuServiceImpl>();
+            services.AddScoped<IRoleRepository, RoleRepositoryImpl>();
+            services.AddScoped<IRoleService, RoleServiceImpl>();
             services.AddScoped<IUserRepository, UserRepositoryImpl>();
             services.AddScoped<IUserService, UserServiceImpl>();
             return services;

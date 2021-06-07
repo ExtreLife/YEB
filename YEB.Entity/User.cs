@@ -8,6 +8,11 @@ namespace YEB.Entity
 {
     public class User
     {
+        public User()
+        {
+            Roles = new List<Role>();
+        }
+
         [Key]
         [Column(TypeName = "varchar(30)")]
         public string Username { get; set; }
@@ -21,5 +26,6 @@ namespace YEB.Entity
         public DateTime? Birthdate { get; set; }
         [Column(TypeName = "varchar(11)")]
         public string Contact { get; set; }
+        public List<Role> Roles { get; set; }
     }
 }

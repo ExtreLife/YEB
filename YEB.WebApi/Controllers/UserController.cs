@@ -62,13 +62,11 @@ namespace YEB.WebApi.Controllers
         {
             try
             {
+                // 获取Jwt配置信息
                 var SecrtKey = _configuration["JwtConfig:SecrtKey"];
                 var ISS = _configuration["JwtConfig:ISS"];
                 var Audience = _configuration["JwtConfig:Audience"];
                 int Expires = int.Parse(_configuration["JwtConfig:Expires"]);
-                //var secrtKey = "254d7345b0bf11ebbd2b7c8ae14efa53";
-                //var iss = "https://localhost:44368";
-                //var audience = "https://localhost:44368";
                 if (await _userService.Login(user) > 0)
                 {
                     var claims = new[]
@@ -143,16 +141,9 @@ namespace YEB.WebApi.Controllers
         {
             try
             {
-                var SecrtKey = _configuration["JwtConfig:SecrtKey"];
-                var ISS = _configuration["JwtConfig:ISS"];
-                var Audience = _configuration["JwtConfig:Audience"];
-                var Expires = _configuration["JwtConfig:Expires"];
                 return Ok(new
                 {
-                    secrtKey = SecrtKey,
-                    iss = ISS,
-                    audience = Audience,
-                    expires = Expires
+                    name = Response.HttpContext.User.Identity.Name
                 });
             }
             catch (Exception e)
